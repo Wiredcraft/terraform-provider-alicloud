@@ -1014,7 +1014,7 @@ func buildKubernetesArgs(d *schema.ResourceData, meta interface{}) (*cs.Kubernet
 		PublicSLB:                d.Get("slb_internet_enabled").(bool),
 		CloudMonitorFlags:        d.Get("install_cloud_monitor").(bool),
 		ZoneId:                   zoneId,
-		UserCa:                   d.Get("user_ca").(string),
+		UserCA:                   d.Get("user_ca").(string),
 	}
 
 	if v, ok := d.GetOk("worker_data_disk_category"); ok {
@@ -1123,7 +1123,7 @@ func buildKubernetesMultiAZArgs(d *schema.ResourceData, meta interface{}) (*cs.K
 		PublicSLB:                d.Get("slb_internet_enabled").(bool),
 		CloudMonitorFlags:        d.Get("install_cloud_monitor").(bool),
 		KubernetesVersion:        d.Get("version").(string),
-		UserCa:                   d.Get("user_ca").(string),
+		UserCA:                   d.Get("user_ca").(string),
 	}
 
 	if v, ok := d.GetOk("worker_data_disk_category"); ok {
