@@ -171,6 +171,7 @@ type KubernetesCreationArgs struct {
 
 	LoginPassword     string `json:"login_password,omitempty"`
 	KeyPair           string `json:"key_pair,omitempty"`
+	UserCA            string `json:"user_ca,omitempty"`
 	NumOfNodes        int64  `json:"num_of_nodes,omitempty"`
 	SNatEntry         bool   `json:"snat_entry"`
 	SSHFlags          bool   `json:"ssh_flags"`
@@ -182,8 +183,6 @@ type KubernetesCreationArgs struct {
 
 	ClusterType string `json:"cluster_type"`
 	Network     string `json:"network,omitempty"`
-
-	UserCa      string `json:"user_ca,omitempty"`
 
 	KubernetesVersion string              `json:"kubernetes_version,omitempty"`
 	StackParams       KubernetesStackArgs `json:"stack_params,omitempty"`
@@ -235,14 +234,13 @@ type KubernetesMultiAZCreationArgs struct {
 	NumOfNodesC       int64  `json:"num_of_nodes_c"`
 	LoginPassword     string `json:"login_password,omitempty"`
 	KeyPair           string `json:"key_pair,omitempty"`
+	UserCA            string `json:"user_ca,omitempty"`
 	SSHFlags          bool   `json:"ssh_flags"`
 	CloudMonitorFlags bool   `json:"cloud_monitor_flags"`
 	NodeCIDRMask      string `json:"node_cidr_mask,omitempty"`
 	LoggingType       string `json:"logging_type,omitempty"`
 	SLSProjectName    string `json:"sls_project_name,omitempty"`
 	PublicSLB         bool   `json:"public_slb"`
-
-	UserCa    string `json:"user_ca,omitempty"`
 
 	KubernetesVersion string `json:"kubernetes_version,omitempty"`
 	Network           string `json:"network,omitempty"`
