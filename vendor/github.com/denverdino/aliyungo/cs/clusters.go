@@ -183,6 +183,8 @@ type KubernetesCreationArgs struct {
 	ClusterType string `json:"cluster_type"`
 	Network     string `json:"network,omitempty"`
 
+	UserCa      string `json:"user_ca,omitempty"`
+
 	KubernetesVersion string              `json:"kubernetes_version,omitempty"`
 	StackParams       KubernetesStackArgs `json:"stack_params,omitempty"`
 }
@@ -239,6 +241,8 @@ type KubernetesMultiAZCreationArgs struct {
 	LoggingType       string `json:"logging_type,omitempty"`
 	SLSProjectName    string `json:"sls_project_name,omitempty"`
 	PublicSLB         bool   `json:"public_slb"`
+
+	UserCa    string `json:"user_ca,omitempty"`
 
 	KubernetesVersion string `json:"kubernetes_version,omitempty"`
 	Network           string `json:"network,omitempty"`
